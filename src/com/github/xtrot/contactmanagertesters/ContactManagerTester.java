@@ -37,13 +37,13 @@ public class ContactManagerTester {
 	public static void test1(){
 		System.out.println("Adding first three Contacts");
 		
-		cm.add(new Contact("Enddy", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddy", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddo", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddo", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddu", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddu", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
 		
@@ -53,25 +53,25 @@ public class ContactManagerTester {
 	public static void test2(){
 		System.out.println("Going for nine Contacts");
 		
-		cm.add(new Contact("Endde", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Endde", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddi", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddi", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Endda", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Endda", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddr", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddr", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddf", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddf", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddg", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddg", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddy", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddy", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
 		
@@ -81,16 +81,16 @@ public class ContactManagerTester {
 	public static void test3(){
 		System.out.println("Breaking the 10 bar Contacts");
 		
-		cm.add(new Contact("Enddr", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddr", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddf", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddf", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddg", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddg", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
-		cm.add(new Contact("Enddy", "Gonzalez", "787-271-9885"
+		cm.add(new Contact("Enddy", "Gonzalez", "124-356-6985"
 				, " ", "enddy.gonzalez@upr.edu",
 				new SortedArrayList<Address>(INITCAP)));
 		
