@@ -41,5 +41,5 @@ public interface SortedList<E> {
 	
 	public void clear();
 
-	Iterator<E> iterator();
+	public Iterator<E> iterator(int i);
 }

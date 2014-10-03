@@ -15,7 +15,7 @@ public class ContactStore {
 	}
 	
 	public SortedArrayList<Contact> read(){
-		SortedArrayList<Contact> contacts = new SortedArrayList<Contact>(SortedArrayList.INITCAP);
+		SortedArrayList<Contact> contacts = new SortedArrayList<Contact>();
 		try {
 			String ln;
 			BufferedReader br = new BufferedReader(new FileReader(f));
@@ -45,7 +45,7 @@ public class ContactStore {
 	private Contact readLn(String s){
 		String[] fields=s.split(",");
 		String[] addressStrings=fields[fields.length-1].split(";");
-		SortedArrayList<Address> addresses = new SortedArrayList<>(SortedArrayList.INITCAP);
+		SortedArrayList<Address> addresses = new SortedArrayList<Address>();
 		for(int i=0; i<addressStrings.length-1;i++)// Last String will always be "".
 			addresses.add(Address.parseFrom(addressStrings[i]));
 		return new Contact(fields[0], fields[1],fields[2],fields[3],fields[4], addresses);

@@ -5,12 +5,11 @@ import com.github.xtrot.contactmanager.Contact;
 import com.github.xtrot.contactmanager.SortedArrayList;
 
 public class SortedArrayListTester {
-	protected static final int INITCAP=10;
 	protected static SortedArrayList<Contact> sal;
 
 	public static void main(String[] args) {
 		
-		sal = new SortedArrayList<Contact>(INITCAP);
+		sal = new SortedArrayList<Contact>();
 		
 	}
 	
@@ -19,13 +18,13 @@ public class SortedArrayListTester {
 		
 		addContact(new Contact("Enddy", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddo", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddu", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		
 		displayAll();
 		addOneAdressToAll(new Address("Enddo", "Bleh", "123", "Derp", "HerpLand", "00lel"));
@@ -36,25 +35,25 @@ public class SortedArrayListTester {
 		
 		addContact(new Contact("Endde", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddi", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Endda", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddr", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddf", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddg", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddy", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		
 		displayAll();
 	}
@@ -64,16 +63,16 @@ public class SortedArrayListTester {
 		
 		addContact(new Contact("Enddr", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddf", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddg", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		addContact(new Contact("Enddy", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new SortedArrayList<Address>(INITCAP)));
+				new SortedArrayList<Address>()));
 		
 		displayAll();
 		

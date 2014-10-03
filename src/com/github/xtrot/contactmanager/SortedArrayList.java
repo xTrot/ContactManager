@@ -16,8 +16,10 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 
 		private int currentPosition;
 
-		public ListIterator(){
-			this.currentPosition = 0;
+		public ListIterator(int i){
+			if(i<0||i>=currentSize)
+				throw new IndexOutOfBoundsException("");
+			this.currentPosition = i;
 		}
 
 		@Override
@@ -41,12 +43,9 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 
 	}
 
-	public SortedArrayList(int initialCapacity){
-		if (initialCapacity < 1){
-			throw new IllegalArgumentException("Capacity must be at least 1.");
-		}
+	public SortedArrayList(){
 		this.currentSize = 0;
-		this.elements = (E[]) new Object[initialCapacity];
+		this.elements = (E[]) new Object[INITCAP];
 	}
 
 	@Override
@@ -55,7 +54,7 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 			throw new IllegalArgumentException("Argument object cannot be null.");
 		}
 		else {
-			if(obj instanceof Contact||obj instanceof Address){
+			if(obj instanceof Contact||obj instanceof Address|| obj instanceof String){
 				String contender = obj.toString();
 				if(currentSize==0){
 					this.add(0,obj);
@@ -262,11 +261,15 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 		}
 		this.currentSize = 0;
 	}
+	
+	@Override
+	public Iterator<E> iterator(int i) {
+		return new ListIterator<E>(i);
+	}
 
 	@Override
 	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ListIterator<E>(0);
 	}
 
 }

@@ -20,7 +20,7 @@ public class ContactsManager {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}finally{
-				contacts = new SortedArrayList<>(SortedArrayList.INITCAP);
+				contacts = new SortedArrayList<>();
 			}
 		}
 	}
