@@ -1,8 +1,8 @@
-package com.github.xtrot.contactmanagertesters;
+package com.github.xtrot.contactmanager.SortedArrayList.contactmanagertesters;
 
 import com.github.xtrot.contactmanager.Address;
 import com.github.xtrot.contactmanager.Contact;
-import com.github.xtrot.contactmanager.SortedArrayList;
+import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
 
 public class SortedArrayListTester {
 	protected static SortedArrayList<Contact> sal;

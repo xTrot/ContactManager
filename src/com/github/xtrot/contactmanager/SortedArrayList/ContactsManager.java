@@ -1,7 +1,10 @@
-package com.github.xtrot.contactmanager;
+package com.github.xtrot.contactmanager.SortedArrayList;
 
 import java.io.File;
 import java.io.IOException;
+
+import com.github.xtrot.contactmanager.Address;
+import com.github.xtrot.contactmanager.Contact;
 
 public class ContactsManager {
 	

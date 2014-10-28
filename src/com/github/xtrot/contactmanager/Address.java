@@ -1,6 +1,6 @@
 package com.github.xtrot.contactmanager;
 
-public class Address {
+public class Address implements Comparable<Address> {
 	private String name;
 	private String street;
 	private String number;
@@ -64,6 +64,11 @@ public class Address {
 	public static Address parseFrom(String string) {
 		String[] fields = string.split(":");
 		return new Address(fields[0],fields[1],fields[2],fields[3],fields[4],fields[5]);
+	}
+
+	@Override
+	public int compareTo(Address contender) {
+		return name.compareTo(contender.name);
 	}
 	
 	

@@ -1,4 +1,4 @@
-package com.github.xtrot.contactmanager;
+package com.github.xtrot.contactmanager.SortedArrayList;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,6 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import com.github.xtrot.contactmanager.Address;
+import com.github.xtrot.contactmanager.Contact;
 
 public class ContactStore {
 	private File f;

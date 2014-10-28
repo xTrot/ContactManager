@@ -1,6 +1,8 @@
 package com.github.xtrot.contactmanager;
 
-public class Contact {
+import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
+
+public class Contact implements Comparable<Contact> {
 	private String firstName;
 	private String lastName;
 	private String personalPhone;
@@ -68,6 +70,11 @@ public class Contact {
 	@Override
 	public String toString(){
 		return (firstName+" "+lastName).toLowerCase();
+	}
+
+	@Override
+	public int compareTo(Contact contender) {
+		return (firstName+" "+lastName).compareToIgnoreCase(contender.firstName+" "+contender.lastName);
 	}
 	
 }

@@ -8,7 +8,7 @@ import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.xtrot.contactmanager.SortedArrayList;
+import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
 
 //import edu.uprm.ece.icom4035.list.ReverseIterator;
 // import here your SortedArrayList
@@ -124,11 +124,15 @@ public class Test2 {
 
 	@Test
 	public void testIteratorInt() {
-		Iterator<String> iter = this.list.iterator(0);
+		Iterator<String> iter = this.list.iterator();
 		assertTrue(iter.hasNext());
 		assertTrue(iter.next().equals("Amy"));
 
-		iter = this.list.iterator(2);
+		iter = this.list.iterator();
+		iter.next();
+		iter.next();
+		iter.next();
+		
 		assertTrue(iter.hasNext());
 		assertTrue(iter.next().equals("Bob"));
 

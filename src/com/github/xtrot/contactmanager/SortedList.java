@@ -2,7 +2,7 @@ package com.github.xtrot.contactmanager;
 
 import java.util.Iterator;
 
-public interface SortedList<E> {
+public interface SortedList<E extends Comparable<E>> extends Iterable<E>{
 	
 	/*
 	 * I will be implementing the sorting within the add(E e)
@@ -41,5 +41,5 @@ public interface SortedList<E> {
 	
 	public void clear();
 
-	public Iterator<E> iterator(int i);
+	public Iterator<E> iterator();
 }

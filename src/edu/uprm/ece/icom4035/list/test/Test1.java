@@ -7,18 +7,19 @@ import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.xtrot.contactmanager.SortedArrayList;
+import com.github.xtrot.contactmanager.DoublyLinkedList;
+import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
 
 // import edu.uprm.ece.icom4035.list.ReverseIterator;
 // import here your SortedArrayList
 
 public class Test1{
-	private SortedArrayList<String> list;
+	private DoublyLinkedList<String> list;
 
 	@Before
 	public void setUp() throws Exception {
 		
-		this.list = new SortedArrayList<String>();
+		this.list = new DoublyLinkedList<String>();
 		this.list.add("Ron");
 		this.list.add("Amy");
 		this.list.add("Apu");
@@ -133,7 +134,7 @@ public class Test1{
 
 	@Test
 	public void testIteratorInt() {
-		Iterator<String> iter = this.list.iterator(0);
+		Iterator<String> iter = this.list.iterator();
 		assertTrue(iter.hasNext());
 		assertTrue(iter.next().equals("Amy"));
 

@@ -1,9 +1,14 @@
-package com.github.xtrot.contactmanager;
+package com.github.xtrot.contactmanager.SortedArrayList;
 
+import java.lang.reflect.Array;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
+import com.github.xtrot.contactmanager.Address;
+import com.github.xtrot.contactmanager.Contact;
+import com.github.xtrot.contactmanager.SortedList;
+
+public class SortedArrayList<E extends Comparable<E>>  implements SortedList<E> {
 
 	// private fields
 	public static final int INITCAP=10;
@@ -45,7 +50,7 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 
 	public SortedArrayList(){
 		this.currentSize = 0;
-		this.elements = (E[]) new Object[INITCAP];
+		this.elements = (E[])Array.newInstance(Comparable.class, INITCAP);;
 	}
 
 	@Override
@@ -92,7 +97,7 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 
 	private void reAllocate() {
 		// create a new array with the twice the size
-		E newElements[] = (E[]) new Object[2*this.elements.length];
+		E newElements[] = (E[])Array.newInstance(Comparable.class, 2*this.elements.length);
 		// copy all values into the new array
 		for (int i=0; i < this.currentSize; ++i){
 			newElements[i] = this.elements[i];
@@ -260,11 +265,6 @@ public class SortedArrayList<E>  implements Iterable<E>, SortedList<E> {
 			this.elements[i] = null;
 		}
 		this.currentSize = 0;
-	}
-	
-	@Override
-	public Iterator<E> iterator(int i) {
-		return new ListIterator<E>(i);
 	}
 
 	@Override
