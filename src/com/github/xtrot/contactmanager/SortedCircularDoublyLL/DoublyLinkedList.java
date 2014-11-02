@@ -1,7 +1,9 @@
-package com.github.xtrot.contactmanager;
+package com.github.xtrot.contactmanager.SortedCircularDoublyLL;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import com.github.xtrot.contactmanager.SortedList;
 
 public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> {
 	
@@ -110,6 +112,8 @@ public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> 
 	
 	public DoublyLinkedList(){
 		header = new Node();
+		header.setNext(header);
+		header.setPrev(header);
 		this.currentSize = 0;
 	}
 
@@ -128,20 +132,37 @@ public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> 
 			throw new IllegalArgumentException("Parameter cannot be null.");
 		}
 		
-		if(header.getNext()==null){
+		if(header.getNext()==header){
 			Node newNode = new Node();
 			newNode.setValue(obj);
-			newNode.setNext(newNode);
-			newNode.setPrev(newNode);
+			newNode.setNext(header);
+			newNode.setPrev(header);
 			header.setNext(newNode);
-		}else{
+			header.setPrev(newNode);
+			System.out.println("Add: State #1");
+		} else {
 			Node back = header.getNext();
-			if(canMoveNode(back, obj, true)){
-				for(moveNode(back,true);canMoveNode(back, obj, true);moveNode(back,true));
+			for(int i=0;i<currentSize;i++){
+				if(obj.compareTo(back.getValue()) < 0){
+					back=back.getPrev();
+					Node front   = back.getNext();
+					Node newNode = new Node();
+					
+					newNode.setValue(obj);
+					newNode.setNext(front);
+					newNode.setPrev(back);
+					back.setNext(newNode);
+					front.setPrev(newNode);
+					
+					System.out.println("Add: State #2");
+					currentSize++;
+					return;
+				}
+				
+				back=back.getNext();
+				
 			}
-//			else if(canMoveNode(back, obj, false)){
-//				for(moveNode(back,false);canMoveNode(back, obj, false);moveNode(back,false));
-//			}
+			back = header.getPrev();
 			Node front = back.getNext();
 			Node newNode = new Node();
 			newNode.setValue(obj);
@@ -149,31 +170,9 @@ public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> 
 			newNode.setPrev(back);
 			back.setNext(newNode);
 			front.setPrev(newNode);
+			System.out.println("Add: State #3");
 		}
 		currentSize++;
-	}
-	
-	private boolean canMoveNode(Node temp,E obj,boolean right){
-		if(right){
-			if(obj.compareTo(temp.getNext().getValue())<=0&&
-//					temp.getValue().compareTo(temp.getNext().getValue())>0&&
-					temp!=header.getNext())
-				return true;
-		}else{
-			// Picheale a esto cuando haga uno infiero el otro.
-			if(obj.compareTo(temp.getPrev().getValue())<0&&
-					temp.getValue().compareTo(temp.getPrev().getValue())<0)
-				return true;
-		}
-		return false;
-	}
-	
-	private void moveNode(Node temp,boolean right){
-		if(right){
-			temp = temp.getNext();
-		}else{
-			temp = temp.getPrev();
-		}
 	}
 
 //		Index specific add is not needed in  when using a Sorted Add.
@@ -202,10 +201,6 @@ public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> 
 //			this.currentSize++;
 //		}
 //	}
-	
-	private void relocateHead(){
-		//TODO Implement for more efficiency
-	}
 
 	@Override
 	public boolean remove(E obj) {

@@ -1,4 +1,4 @@
-package com.github.xtrot.contactmanager;
+package com.github.xtrot.contactmanager.SortedCircularDoublyLL;
 
 public interface ReverseIterator<E> {
 	

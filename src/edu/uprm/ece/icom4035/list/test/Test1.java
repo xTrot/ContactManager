@@ -7,8 +7,8 @@ import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.xtrot.contactmanager.DoublyLinkedList;
 import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
+import com.github.xtrot.contactmanager.SortedCircularDoublyLL.DoublyLinkedList;
 
 // import edu.uprm.ece.icom4035.list.ReverseIterator;
 // import here your SortedArrayList

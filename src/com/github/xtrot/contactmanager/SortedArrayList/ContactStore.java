@@ -60,7 +60,7 @@ public class ContactStore {
 				c.getPersonalPhone()+","+
 				c.getWorkPhone()+","+
 				c.getEmail()+",";
-		SortedArrayList<Address> addresses=c.getAdresses();
+		SortedArrayList<Address> addresses=(SortedArrayList<Address>) c.getAdresses();
 		for(int i=0; i<addresses.size();i++){
 			temp += addresses.get(i).parseTo()+";";
 		}

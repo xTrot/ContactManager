@@ -8,10 +8,10 @@ public class Contact implements Comparable<Contact> {
 	private String personalPhone;
 	private String workPhone;
 	private String email;
-	private SortedArrayList<Address> addresses;
+	private SortedList<Address> addresses;
 	
 	public Contact(String fn,String ln,String pp,
-			String wp,String e, SortedArrayList<Address> address) {
+			String wp,String e, SortedList<Address> address) {
 		this.firstName = fn;
 		this.lastName = ln;
 		this.personalPhone = pp;
@@ -51,7 +51,7 @@ public class Contact implements Comparable<Contact> {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public SortedArrayList<Address> getAdresses() {
+	public SortedList<Address> getAdresses() {
 		return addresses;
 	}
 	public void addAddress(Address a){
@@ -74,7 +74,7 @@ public class Contact implements Comparable<Contact> {
 
 	@Override
 	public int compareTo(Contact contender) {
-		return (firstName+" "+lastName).compareToIgnoreCase(contender.firstName+" "+contender.lastName);
+		return (firstName+" "+lastName).compareTo(contender.firstName+" "+contender.lastName);
 	}
 	
 }

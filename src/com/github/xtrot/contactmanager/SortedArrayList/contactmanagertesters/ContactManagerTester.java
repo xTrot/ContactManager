@@ -4,6 +4,7 @@ import com.github.xtrot.contactmanager.Address;
 import com.github.xtrot.contactmanager.Contact;
 import com.github.xtrot.contactmanager.SortedArrayList.ContactsManager;
 import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
+import com.github.xtrot.contactmanager.SortedCircularDoublyLL.SortedCircularDoublyLLtesters.SortedCircularDoublyLLTester;
 
 public class ContactManagerTester {
 	private static ContactsManager cm;
@@ -11,10 +12,10 @@ public class ContactManagerTester {
 
 	public static void main(String[] args) {
 		
-		SortedArrayListTester.main(null);
-		SortedArrayListTester.test1();
-		SortedArrayListTester.test2();
-		SortedArrayListTester.test3();
+		SortedCircularDoublyLLTester.main(null);
+		SortedCircularDoublyLLTester.test1();
+		SortedCircularDoublyLLTester.test2();
+		SortedCircularDoublyLLTester.test3();
 		System.out.println("First Test Completed.");
 		
 		System.out.println();
