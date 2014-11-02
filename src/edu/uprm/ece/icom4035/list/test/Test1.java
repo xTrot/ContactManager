@@ -8,18 +8,18 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.github.xtrot.contactmanager.SortedArrayList.SortedArrayList;
-import com.github.xtrot.contactmanager.SortedCircularDoublyLL.DoublyLinkedList;
+import com.github.xtrot.contactmanager.SortedCircularDoublyLL.SortedCircularDoublyLinkedList;
 
 // import edu.uprm.ece.icom4035.list.ReverseIterator;
 // import here your SortedArrayList
 
 public class Test1{
-	private DoublyLinkedList<String> list;
+	private SortedCircularDoublyLinkedList<String> list;
 
 	@Before
 	public void setUp() throws Exception {
 		
-		this.list = new DoublyLinkedList<String>();
+		this.list = new SortedCircularDoublyLinkedList<String>();
 		this.list.add("Ron");
 		this.list.add("Amy");
 		this.list.add("Apu");

@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 import com.github.xtrot.contactmanager.SortedList;
 
-public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> {
+public class SortedCircularDoublyLinkedList<E extends Comparable<E>> implements SortedList<E> {
 	
 	private class Node  {
 		private E value;
@@ -110,7 +110,7 @@ public class DoublyLinkedList<E extends Comparable<E>> implements SortedList<E> 
 	private Node header=null;
 	private int currentSize;
 	
-	public DoublyLinkedList(){
+	public SortedCircularDoublyLinkedList(){
 		header = new Node();
 		header.setNext(header);
 		header.setPrev(header);

@@ -2,14 +2,14 @@ package com.github.xtrot.contactmanager.SortedCircularDoublyLL.SortedCircularDou
 
 import com.github.xtrot.contactmanager.Address;
 import com.github.xtrot.contactmanager.Contact;
-import com.github.xtrot.contactmanager.SortedCircularDoublyLL.DoublyLinkedList;
+import com.github.xtrot.contactmanager.SortedCircularDoublyLL.SortedCircularDoublyLinkedList;
 
 public class SortedCircularDoublyLLTester {
-	protected static DoublyLinkedList<Contact> sal;
+	protected static SortedCircularDoublyLinkedList<Contact> sal;
 
 	public static void main(String[] args) {
 		
-		sal = new DoublyLinkedList<Contact>();
+		sal = new SortedCircularDoublyLinkedList<Contact>();
 		test1();
 		test2();
 		test3();
@@ -21,13 +21,13 @@ public class SortedCircularDoublyLLTester {
 		
 		addContact(new Contact("Enddy", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddo", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddu", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		
 		displayAll();
 		addOneAdressToAll(new Address("Enddo", "Bleh", "123", "Derp", "HerpLand", "00lel"));
@@ -38,25 +38,25 @@ public class SortedCircularDoublyLLTester {
 		
 		addContact(new Contact("Endde", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddi", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Endda", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddr", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddf", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddg", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddy", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		
 		displayAll();
 	}
@@ -66,16 +66,16 @@ public class SortedCircularDoublyLLTester {
 		
 		addContact(new Contact("Enddr", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddf", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddg", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		addContact(new Contact("Enddy", "Gonzalez", "125-365-6985"
 				, " ", "enddy.gonzalez@upr.edu",
-				new DoublyLinkedList<Address>()));
+				new SortedCircularDoublyLinkedList<Address>()));
 		
 		displayAll();
 		
